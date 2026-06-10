@@ -1,0 +1,23 @@
+{
+  "name": "园林高级工刷题站",
+  "short_name": "园林刷题",
+  "description": "2026年园林绿化工高级工模拟题库刷题站",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3efe3",
+  "theme_color": "#274c3d",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
