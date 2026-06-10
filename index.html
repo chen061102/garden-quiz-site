@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>园林高级工刷题站</title>
+    <meta
+      name="description"
+      content="2026年园林绿化工高级工模拟题库刷题站，支持手机刷题、错题本、收藏夹和模拟考试。"
+    />
+    <meta name="theme-color" content="#274c3d" />
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">2026 园林绿化工高级工</p>
+          <h1>园林高级工刷题站</h1>
+          <p class="hero__text">
+            顺序练、随机刷、模拟考、错题回炉一站搞定。页面为手机优先设计，链接部署后可以直接发到微信使用。
+          </p>
+        </div>
+        <div class="hero__actions">
+          <button id="shareButton" class="button button--light" type="button">分享链接</button>
+          <button id="installHintButton" class="button button--ghost" type="button">手机使用提示</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel--stats">
+          <div class="stat-grid" id="statGrid"></div>
+          <div class="source-strip" id="sourceStrip"></div>
+        </section>
+
+        <section class="panel panel--controls">
+          <div class="toolbar">
+            <div class="toolbar__block">
+              <span class="toolbar__label">刷题模式</span>
+              <div class="segmented" id="viewTabs"></div>
+            </div>
+            <div class="toolbar__block">
+              <span class="toolbar__label">题型筛选</span>
+              <div class="chip-row" id="typeFilters"></div>
+            </div>
+            <div class="toolbar__block" id="practiceControls">
+              <span class="toolbar__label">练习方式</span>
+              <div class="segmented" id="practiceOrderTabs"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layout__content">
+          <div class="panel panel--question">
+            <div id="questionArea"></div>
+          </div>
+
+          <aside class="side-panel">
+            <section class="panel">
+              <div class="panel__header">
+                <h2>模拟考试</h2>
+                <span class="muted">30 题随机抽取</span>
+              </div>
+              <div id="examCard"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel__header">
+                <h2>最近战绩</h2>
+                <span class="muted">本地保存</span>
+              </div>
+              <div id="historyArea"></div>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="tipsDialog" class="dialog">
+      <div class="dialog__content">
+        <h2>手机和微信使用建议</h2>
+        <ul class="dialog__list">
+          <li>把站点部署到公网后，直接复制网址发到微信聊天或收藏即可。</li>
+          <li>iPhone 可以在 Safari 中“添加到主屏幕”，安卓可在浏览器里“安装应用”。</li>
+          <li>如果在微信里打开，建议点右上角用系统浏览器打开，体验会更顺滑。</li>
+        </ul>
+        <button id="closeTipsButton" class="button" type="button">我知道了</button>
+      </div>
+    </dialog>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
